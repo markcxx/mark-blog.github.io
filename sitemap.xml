@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.galactic-mark.cc/box/animation/index.html</loc>
+    
+    <lastmod>2024-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.galactic-mark.cc/tags/index.html</loc>
     
     <lastmod>2024-04-11</lastmod>
@@ -101,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://www.galactic-mark.cc/box/animation/index.html</loc>
-    
-    <lastmod>2024-04-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.galactic-mark.cc/box/gallery/index.html</loc>
     
     <lastmod>2024-04-11</lastmod>
@@ -140,6 +140,15 @@
     <loc>https://www.galactic-mark.cc/site/echarts/index.html</loc>
     
     <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.galactic-mark.cc/posts/2013454d.html</loc>
+    
+    <lastmod>2022-10-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
