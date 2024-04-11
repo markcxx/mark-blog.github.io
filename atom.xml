@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>怪兽马尔克</title>
+  <title>MARK</title>
   
   
   <link href="https://www.galactic-mark.cc/atom.xml" rel="self"/>
@@ -53,7 +53,7 @@
     
     
     
-    <category term="python爬虫" scheme="https://www.galactic-mark.cc/categories/python%E7%88%AC%E8%99%AB/"/>
+    <category term="爬虫案例" scheme="https://www.galactic-mark.cc/categories/%E7%88%AC%E8%99%AB%E6%A1%88%E4%BE%8B/"/>
     
     
     <category term="Markdown" scheme="https://www.galactic-mark.cc/tags/Markdown/"/>
