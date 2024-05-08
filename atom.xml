@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>MARK</title>
+  <title>怪兽马尔克</title>
   
-  
+  <subtitle>一个热爱技术的小怪兽</subtitle>
   <link href="https://www.galactic-mark.cc/atom.xml" rel="self"/>
   
   <link href="https://www.galactic-mark.cc/"/>
