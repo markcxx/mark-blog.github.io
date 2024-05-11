@@ -139,6 +139,9 @@ function showWelcome() {
         case "天津市":
           posdesc = "讲段相声吧。";
           break;
+        case "重庆市":
+          posdesc = "我希望遇见一个如你一般的人，如山间清爽的风，如古城温暖的光，只要最后是你就好";
+          break;
         case "河北省":
           posdesc = "山势巍巍成壁垒，天下雄关。铁马金戈由此向，无限江山。";
           break;
