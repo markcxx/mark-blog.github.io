@@ -4066,11 +4066,8 @@ figure.highlight pre .javascript .function {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: #9bcbd4;
+  background: rgba(255,255,255,0);
   z-index: 1001;
-  opacity: 0.6;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-  filter: alpha(opacity=60);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -4102,6 +4099,9 @@ figure.highlight pre .javascript .function {
   -o-animation-direction: alternate;
   -ms-animation-direction: alternate;
   animation-direction: alternate;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 #loading-box .loading-image-dot {
   width: 0px;
