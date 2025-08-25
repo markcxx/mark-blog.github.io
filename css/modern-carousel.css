@@ -1,0 +1,450 @@
+/* Modern Carousel 样式 */
+
+.modern-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: var(--global-font), sans-serif;
+}
+
+.modern-carousel-container:hover .modern-carousel-nav-button {
+  opacity: 1;
+}
+
+/* 主轮播卡片 */
+.modern-carousel-card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  transform: translateY(0);
+}
+
+.modern-carousel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--card-border-hover);
+}
+
+.modern-carousel-content {
+  position: relative;
+  height: 20rem;
+}
+
+/* 背景渐变 */
+.modern-carousel-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(var(--primary-color-rgb), 0.05), rgba(var(--accent-color-rgb), 0.05));
+}
+
+.modern-carousel-bg-diagonal {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(var(--primary-color-rgb), 0.1), transparent);
+  clip-path: polygon(0 0, 60% 0, 45% 100%, 0 100%);
+  transition: all 0.5s ease;
+}
+
+.modern-carousel-card:hover .modern-carousel-bg-diagonal {
+  background: linear-gradient(to bottom right, rgba(var(--primary-color-rgb), 0.15), transparent);
+}
+
+/* 图片区域 */
+.modern-carousel-image-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  clip-path: polygon(0 0, 60% 0, 45% 100%, 0 100%);
+}
+
+.modern-carousel-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modern-carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.modern-carousel-card:hover .modern-carousel-image {
+  transform: scale(1.1);
+}
+
+.modern-carousel-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(var(--primary-color-rgb), 0.2));
+  transition: opacity 0.5s ease;
+}
+
+.modern-carousel-card:hover .modern-carousel-image-overlay {
+  background: linear-gradient(to right, transparent, rgba(var(--primary-color-rgb), 0.3));
+}
+
+.modern-carousel-image-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.modern-carousel-card:hover .modern-carousel-image-hover-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 内容区域 */
+.modern-carousel-info-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.modern-carousel-info-wrapper {
+  margin-left: 55%;
+  padding-right: 1rem;
+  width: 55%;
+  max-width: 28rem;
+  text-align: right;
+  overflow: hidden;
+}
+
+.modern-carousel-info-content {
+  margin-top: 0.75rem;
+}
+
+/* 标题和描述 */
+.modern-carousel-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.modern-carousel-card:hover .modern-carousel-title {
+  color: var(--primary-color);
+}
+
+.modern-carousel-description {
+  font-size: 0.875rem;
+  color: var(--text-color-secondary);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.modern-carousel-card:hover .modern-carousel-description {
+  color: var(--text-color);
+}
+
+/* 标签 */
+.modern-carousel-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  justify-content: flex-start;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.modern-carousel-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+  color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.modern-carousel-tag:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.2);
+  border-color: rgba(var(--primary-color-rgb), 0.5);
+  transform: scale(1.05);
+}
+
+/* 按钮 */
+.modern-carousel-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.modern-carousel-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.modern-carousel-button svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-color-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.outline-button {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+}
+
+.outline-button:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.2);
+  border-color: rgba(var(--primary-color-rgb), 0.5);
+  transform: scale(1.05);
+}
+
+/* 导航按钮 */
+.modern-carousel-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: rgba(var(--background-color-rgb), 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.modern-carousel-nav-button:hover {
+  background-color: rgba(var(--background-color-rgb), 0.9);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.prev-button {
+  left: 1rem;
+}
+
+.next-button {
+  right: 1rem;
+}
+
+/* 指示器 */
+.modern-carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.modern-carousel-indicator {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--card-border);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modern-carousel-indicator:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.5);
+  transform: scale(1.25);
+}
+
+.modern-carousel-indicator.active {
+  background-color: var(--primary-color);
+  width: 2rem;
+  box-shadow: 0 2px 8px rgba(var(--primary-color-rgb), 0.5);
+}
+
+/* 计数器 */
+.modern-carousel-counter {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(var(--background-color-rgb), 0.8);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-color-secondary);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+}
+
+.modern-carousel-counter:hover {
+  background-color: rgba(var(--background-color-rgb), 0.9);
+  transform: scale(1.05);
+}
+
+/* 精选标签 */
+.modern-carousel-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-badge {
+  background-color: #ff3860;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(255, 56, 96, 0.3);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* 删除脉冲动画 */
+
+/* 滑动动画 */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .modern-carousel-content {
+    height: 18rem;
+  }
+  
+  .modern-carousel-title {
+    font-size: 1.25rem;
+  }
+  
+  .modern-carousel-description {
+    font-size: 0.8125rem;
+    -webkit-line-clamp: 2;
+  }
+  
+  .modern-carousel-info-wrapper {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .modern-carousel-content {
+    height: 16rem;
+  }
+  
+  .modern-carousel-title {
+    font-size: 1.125rem;
+  }
+  
+  .modern-carousel-description {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 2;
+  }
+  
+  .modern-carousel-tag {
+    font-size: 0.6875rem;
+    padding: 0.1875rem 0.375rem;
+  }
+  
+  .modern-carousel-button {
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* 主题适配 - 亮色主题 */
+:root {
+  --primary-color: #3b82f6;
+  --primary-color-rgb: 59, 130, 246;
+  --primary-color-hover: #2563eb;
+  --accent-color-rgb: 139, 92, 246;
+  --background-color-rgb: 255, 255, 255;
+  --white: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-border-hover: #d1d5db;
+  --text-color: #1f2937;
+  --text-color-secondary: #6b7280;
+}
+
+/* 主题适配 - 暗色主题 */
+[data-theme="dark"] {
+  --primary-color: #60a5fa;
+  --primary-color-rgb: 96, 165, 250;
+  --primary-color-hover: #3b82f6;
+  --accent-color-rgb: 167, 139, 250;
+  --background-color-rgb: 31, 41, 55;
+  --white: #ffffff;
+  --card-bg: #1f2937;
+  --card-border: #374151;
+  --card-border-hover: #4b5563;
+  --text-color: #f9fafb;
+  --text-color-secondary: #d1d5db;
+}
+
+/* 容器样式 */
+#project-carousel-container {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  width: 100%;
+}
