@@ -1,0 +1,93 @@
+/* AI摘要打字机效果样式 */
+.ai-summary-content .typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: rgb(255, 239, 92);
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  vertical-align: baseline;
+}
+
+/* 光标闪烁动画 */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* 暗色主题适配 */
+[data-theme='dark'] .ai-summary-content .typing-cursor {
+  background-color: rgb(255, 239, 92);
+}
+
+/* AI摘要容器样式优化 */
+.ai-summary-container {
+  transition: all 0.3s ease;
+}
+
+.ai-summary-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* DeepSeek V3.1 标识样式 */
+.ai-model-badge {
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.ai-model-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+/* 暗色主题适配 */
+[data-theme='dark'] .ai-model-badge {
+  background: linear-gradient(135deg, #4c63d2 0%, #5a4fcf 100%);
+  box-shadow: 0 2px 4px rgba(76, 99, 210, 0.4);
+}
+
+[data-theme='dark'] .ai-model-badge:hover {
+  box-shadow: 0 4px 8px rgba(76, 99, 210, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .ai-summary-container {
+    margin: 1rem 0;
+    padding: 0.75rem;
+  }
+  
+  .ai-summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .ai-summary-header h4 {
+    font-size: 0.9rem;
+  }
+  
+  .ai-model-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    align-self: flex-end;
+  }
+  
+  .ai-summary-content {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-summary-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ai-model-badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.35rem;
+  }
+}

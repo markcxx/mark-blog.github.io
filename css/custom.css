@@ -1,3 +1,16 @@
+/* 修改文字选中背景颜色 */
+::selection {
+  background-color: rgb(255, 239, 92);
+  color: #333;
+}
+
+::-moz-selection {
+  background-color: rgb(255, 239, 92);
+  color: #333;
+}
+
+/* 主题色已通过Butterfly配置文件设置，这里只保留必要的自定义样式 */
+
 /* 侧边栏个人信息卡片动态渐变色 */
 #aside-content > .card-widget.card-info {
     /* background: linear-gradient(
