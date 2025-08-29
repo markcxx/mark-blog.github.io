@@ -18,13 +18,23 @@ function createAISummaryHTML(summary) {
       <div class="ai-summary-header" style="
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: 0.75rem;
         color: var(--text-color, #333);
       ">
-        <svg style="width: 20px; height: 20px; margin-right: 8px; fill: rgb(255, 239, 92);" viewBox="0 0 24 24">
-          <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-        </svg>
-        <h4 style="margin: 0; font-size: 1rem; font-weight: 600;">AI 文章摘要</h4>
+        <h4>
+          <svg viewBox="0 0 24 24">
+            <defs>
+              <linearGradient id="ai-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" fill="url(#ai-gradient)"></path>
+          </svg>
+          AI 总结
+        </h4>
+        <span class="ai-model-badge">DeepSeek V3.1</span>
       </div>
       <div class="ai-summary-content" style="
         line-height: 1.6;

@@ -29,6 +29,15 @@ const projects = [
     liveUrl: "#",
     githubUrl: "https://github.com/markcxx/huggingface-openai-proxy"
   },
+  {
+    id: 4,
+    title: "墨墨天气API服务及MCP服务",
+    description: "墨墨天气API服务提供天气查询、预报、历史数据等功能，MCP服务提供模型外部调用接口等功能",
+    image: "https://pic1.imgdb.cn/item/68b1ce0a58cb8da5c862529e.png",
+    tags: ["FastAPI", "Python", "React", "TypeScript", "Next.js"],
+    liveUrl: "https://momoweather.markqq.com",
+    githubUrl: "https://github.com/markcxx/momoweather"
+  },
 ];
 
 // 创建项目轮播图组件

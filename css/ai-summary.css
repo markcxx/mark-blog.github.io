@@ -23,6 +23,8 @@
 /* AI摘要容器样式优化 */
 .ai-summary-container {
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .ai-summary-container:hover {
@@ -30,25 +32,101 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* DeepSeek V3.1 标识样式 */
-.ai-model-badge {
+/* AI总结标签样式 - 文字渐变 */
+.ai-summary-header h4 {
+  background: transparent;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
   transition: all 0.3s ease;
   user-select: none;
 }
 
+.ai-summary-header h4:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+/* AI图标样式 */
+.ai-summary-header h4 svg {
+  width: 18px;
+  height: 18px;
+  fill: url(#ai-gradient);
+  margin-right: 0;
+}
+
+/* SVG渐变定义 */
+.ai-summary-header h4::before {
+  content: '';
+  position: absolute;
+  top: -1000px;
+}
+
+.ai-summary-header {
+  position: relative;
+}
+
+.ai-summary-header::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 为SVG图标添加渐变 */
+.ai-summary-header h4 svg {
+  fill: #667eea;
+}
+
+/* DeepSeek V3.1 标识样式 */
+.ai-model-badge {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(255, 107, 107, 0.3);
+}
+
 .ai-model-badge:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
 }
 
 /* 暗色主题适配 */
-[data-theme='dark'] .ai-model-badge {
+[data-theme='dark'] .ai-summary-header h4 {
   background: linear-gradient(135deg, #4c63d2 0%, #5a4fcf 100%);
-  box-shadow: 0 2px 4px rgba(76, 99, 210, 0.4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme='dark'] .ai-summary-header h4:hover {
+  filter: brightness(1.2);
+}
+
+[data-theme='dark'] .ai-summary-header h4 svg {
+  fill: #4c63d2;
+}
+
+[data-theme='dark'] .ai-model-badge {
+  background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+  box-shadow: 0 2px 6px rgba(225, 112, 85, 0.4);
 }
 
 [data-theme='dark'] .ai-model-badge:hover {
-  box-shadow: 0 4px 8px rgba(76, 99, 210, 0.5);
+  box-shadow: 0 4px 10px rgba(225, 112, 85, 0.5);
 }
 
 /* 响应式设计 */
